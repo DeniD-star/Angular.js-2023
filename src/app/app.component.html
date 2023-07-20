@@ -1,0 +1,12 @@
+<!--Here i transfer dates (inputs) to the child component navigation-->
+<!--Output---nie kazvame navigation componenta, 6te ima6 event koito e deklariran vutre(onChildOutput event, i na nego iskam
+  da izvika6 funkciqta outputChildHandler, koqto e deklarirana v appComponentata, i tova koeto se slu4va na click ru4no, kazvame mu fire ni tozi event obratno do parent
+  zatova vseki put che navigation komponenta e cuknat, izvestqva appComponenta)-->
+
+<app-navigation
+[title]="title"
+[activeUsers]="users"
+(onChildOutput)="outputChildHandler()"/>
+<span>{{ title }} app is running!</span>
+<hr/>
+

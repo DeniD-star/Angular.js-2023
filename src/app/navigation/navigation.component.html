@@ -1,0 +1,17 @@
+<div id="nav">
+  <h3>{{titleFromApp}}</h3>
+  <span *ngIf="isActive">
+    <ul>
+      <!--Taking dates from parent appComponent, activeUsers, is coming from " @Input('activeUsers')" in navigation.component.ts-->
+      <li *ngFor="let user of activeUsers">{{ user.name + ": " + user.age}}</li>
+    </ul>
+  </span>
+<span *ngIf="!isActive">
+
+  <input [value]="inputValue" type="text">
+<div>"Nothing is active!"</div>
+</span>
+
+<button (click)="handleClick($event)">Make {{isActive? "Inactive" : "Active"}}</button>
+
+</div>
