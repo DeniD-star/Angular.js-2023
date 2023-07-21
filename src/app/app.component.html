@@ -9,6 +9,12 @@
 (onChildOutput)="outputChildHandler()"/>
 <span>{{ title }} app is running!</span>
 <hr/>
-
+<div>
+  <!--4rez #inputName i #inputAge vzimame referenziq ot samiq component i direktno to si zadelq promenlivite inputName i inputAge
+  i gi podava-->
+  <input #inputName type="text" placeholder="name">
+  <input #inputAge type="text" placeholder="age">
+  <button (click)="addUser(inputName, inputAge)">Add user</button>
+</div>
 <app-user-list [users]="users"/>
 
