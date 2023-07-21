@@ -5,8 +5,8 @@
 
 <app-navigation
 [title]="title"
-[activeUsers]="users"
-(onChildOutput)="outputChildHandler()"/>
+[activeUsers]="userService.users"
+(onChildOutput)="userService.outputChildHandler()"/>
 <span>{{ title }} app is running!</span>
 <hr/>
 <div>
@@ -14,7 +14,7 @@
   i gi podava-->
   <input #inputName type="text" placeholder="name">
   <input #inputAge type="text" placeholder="age">
-  <button (click)="addUser(inputName, inputAge)">Add user</button>
+  <button (click)="setService(inputName, inputAge)">Add user</button>
 </div>
-<app-user-list [users]="users"/>
+<app-user-list [users]="userService.users"/>
 
